@@ -43,10 +43,18 @@
 					<div id="main">
 
                         <article>
-                            <button id=" dom">esconder texto</button>
-							<!--<button id=" dom">esconder texto</button>-->
+                            <button id="dom">esconder/mostrar texto</button>
+							<!--<button id="dom3">mostrar texto</button>-->
 							<h1 id="dom2">texto a esconder</h1>
+							<form id="but">
+							    <div class="form-group">
+							        <label for="exampleInputEmail1">Nombre</label>
+							        <input type="text" class="form-control" id="nombre">
+							    </div>
+							<button type="button" class="btn btn-primary">Enviar</button>
+						  </form>	
                         </article>
+						
 
 					</div>
 
@@ -70,8 +78,25 @@
 			<script src="assets/js/main.js"></script>
 
             <script>
-                $("#dom").click(function(){
-					$("dom2").hide();
+                /*$("#dom").click(function(){
+					$("#dom2").hide();
+				})
+
+				$("#dom3").click(function(){
+					$("#dom2").show();
+					console.log("buscar dom2")
+				})*/
+
+				$("#dom").click(function(){
+					$("#dom2").toggle();
+					document.getElementById("dom".innerHTML="mostrar texto")
+				})
+
+				$(document).ready(function(){
+					$("#but").click(function(){
+						var nombre = $("#nombre").val();
+						console.log("nombre")
+					})
 				})
 
 
